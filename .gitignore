@@ -1,0 +1,25 @@
+# CMake / C++
+/build/
+/cmake-build-*/
+CMakeUserPresets.json
+
+# Python / uv
+__pycache__/
+*.py[cod]
+/.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Diplodoc output
+/docs/_build/
+
+# CodeGraph generated index
+/.codegraph/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+
+# Temporary generated answers
+/.tmp-answer/
