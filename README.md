@@ -1,12 +1,14 @@
 # Алгоритмы и структуры данных
 
-Каркас учебного проекта. Пользователь предоставит план алгоритмов и структур данных; до этого новые темы и реализации не добавляются. Стартовая страница курса находится в [`docs/`](docs/index.md).
+Учебный курс по алгоритмам и структурам данных. Первая тема — Bubble Sort, Insertion Sort и Selection Sort. Следующие темы добавляются по плану пользователя. Стартовая страница курса находится в [`docs/`](docs/index.md).
 
 ## Будущие реализации
 
 - Python: `impl/python/src/algorithms/<topic>/<algorithm>/` и `impl/python/tests/`.
 - C++: `impl/cpp/src/algorithms/<topic>/<algorithm>/` и `impl/cpp/tests/`.
 - Структуры данных: `impl/<language>/src/data-structures/<structure>/` и соответствующее дерево `impl/<language>/tests/`.
+
+Реализации первых трёх сортировок находятся в `impl/{python,cpp}/src/algorithms/sorting/`, тесты — в соответствующих `tests/` деревьях.
 
 Каталоги создаются с первой реализацией; пустые заглушки не хранятся. Python использует uv и требует Python 3.15+. C++ использует C++26, CMake, Ninja, named modules и `import std;`.
 
