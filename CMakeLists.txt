@@ -66,4 +66,20 @@ endif()
 
 enable_testing()
 
-message(STATUS "Course scaffold configured; algorithm and test targets will be added with lessons.")
+add_library(sorting_algorithms)
+target_sources(sorting_algorithms
+    PUBLIC
+        FILE_SET CXX_MODULES FILES
+            impl/cpp/src/algorithms/sorting/bubble_sort/bubble_sort.cppm
+            impl/cpp/src/algorithms/sorting/insertion_sort/insertion_sort.cppm
+            impl/cpp/src/algorithms/sorting/selection_sort/selection_sort.cppm
+            impl/cpp/src/algorithms/sorting/sorting.cppm
+)
+
+foreach(ALGORITHM IN ITEMS bubble_sort insertion_sort selection_sort)
+    add_executable(test_${ALGORITHM}
+        impl/cpp/tests/algorithms/sorting/${ALGORITHM}/test_${ALGORITHM}.cpp
+    )
+    target_link_libraries(test_${ALGORITHM} PRIVATE sorting_algorithms)
+    add_test(NAME ${ALGORITHM} COMMAND test_${ALGORITHM})
+endforeach()
