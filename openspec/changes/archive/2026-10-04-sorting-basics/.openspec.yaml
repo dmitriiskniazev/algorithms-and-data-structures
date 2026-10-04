@@ -1,0 +1,4 @@
+schema: spec-driven
+created: 2026-10-04
+goal: Реализовать Bubble Sort, Insertion Sort и Selection Sort на Python и
+  C++26, добавить тесты и страницу Sphinx
