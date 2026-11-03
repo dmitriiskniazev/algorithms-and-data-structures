@@ -11,7 +11,7 @@ export function selection(sources, search) {
 
 // Equal lines share a row; additions/removals occupy a gap on the other side.
 export function align(first, second) {
-  const a = first.split("\n"), b = second.split("\n");
+  const a = first ? first.split("\n") : [], b = second ? second.split("\n") : [];
   if (first.endsWith("\n")) a.pop();
   if (second.endsWith("\n")) b.pop();
   const dp = Array.from({ length: a.length + 1 }, () => new Uint32Array(b.length + 1));
@@ -27,4 +27,16 @@ export function align(first, second) {
     else rows.push({ first: null, second: j++, change: "added" });
   }
   return rows;
+}
+
+
+export function displayRows(first, second, changes) {
+  if (second && changes) {
+    const rows = align(first.code, second.code);
+    return { before: rows, after: rows };
+  }
+  return {
+    before: first.lines.map((_, i) => ({ first: i, second: null, change: "same" })),
+    after: second ? second.lines.map((_, i) => ({ first: null, second: i, change: "same" })) : [],
+  };
 }

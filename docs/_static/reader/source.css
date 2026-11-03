@@ -1,0 +1,62 @@
+/* Shared source boundaries and headers in both reading modes. */
+:root {
+  --code-surface: #1b2028;
+  --code-header: #272e38;
+}
+.source-panel, .literal-block-wrapper, .source-details {
+  min-width: 0;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border, var(--line));
+  border-radius: .35rem;
+  background: var(--code-surface);
+}
+.source-header, div.code-block-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  min-width: 0;
+  padding: .65rem .85rem;
+  color: var(--ink);
+  background: var(--code-header);
+  border-bottom: 1px solid var(--border, var(--line));
+  font: .8rem/1.5 var(--font-prose, system-ui, sans-serif);
+}
+.source-header > div, .source-label, .source-header .caption-text { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.source-header .caption-text, .source-label, .pane-path { font-family: var(--font-code, ui-monospace, monospace); }
+.source-header .copy-button { flex: 0 0 auto; }
+.pane-side { display: block; color: var(--muted); font-size: .75rem; }
+.pane-path { display: block; font-size: .75rem; overflow-wrap: anywhere; }
+.source-details > summary { border-bottom: 0; border-radius: .35rem; cursor: pointer; }
+.source-details[open] > summary { border-bottom: 1px solid var(--border, var(--line)); border-radius: .35rem .35rem 0 0; }
+.source-details > summary::before { content: "▸"; color: var(--muted); }
+.source-details[open] > summary::before { transform: rotate(90deg); }
+.source-details > summary::marker { content: ""; }
+.source-details .literal-block-wrapper { margin: 0; border: 0; border-radius: 0; }
+#lesson-material div.highlight { margin: 1.5rem 0; border: 1px solid var(--border, var(--line)); border-radius: .35rem; background: var(--code-surface); }
+#lesson-material :is(.source-panel, .literal-block-wrapper, .source-details) div.highlight { margin: 0; border: 0; border-radius: 0 0 .35rem .35rem; }
+#lesson-material div.highlight pre { padding: 1rem; background: transparent; }
+#lesson-material .source-code, #code-workspace .source-code { background: transparent; }
+.pane-source, .code-window { background: var(--code-surface); }
+#code-workspace .pane-source pre { background: transparent; }
+.pane-headers .pane-header + .pane-header { border-left: 1px solid var(--border, var(--line)); }
+#lesson-material > section > section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border, var(--line)); }
+#lesson-material > section > section > h2 { margin-top: 0; }
+#lesson-material blockquote { padding-left: 1rem; border-left: 2px solid var(--border, var(--line)); }
+@media (max-width: 640px) {
+  .source-header, div.code-block-caption { gap: .5rem; padding: .5rem .65rem; }
+  .source-header .copy-button { padding: .3rem .4rem; }
+}
+@media print {
+  :root[data-theme], :root { --code-surface: #f5f5f5; --code-header: #eaeaea; }
+  .source-panel, .literal-block-wrapper, .source-details { border-color: #bbb; }
+  .source-header, div.code-block-caption { color: #222; background: var(--code-header); }
+  .source-header .copy-button { display: none !important; }
+}
+/* Inline identifiers also stay distinct from prose without becoming full panels. */
+#lesson-material :is(p, li, td) code {
+  padding: .1em .3em;
+  border-radius: .2rem;
+  background: var(--code-header);
+  font-family: var(--font-code, ui-monospace, monospace);
+}

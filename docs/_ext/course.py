@@ -17,7 +17,9 @@ class SourceDetails(nodes.General, nodes.Element):
 
 def visit_source(translator: HTML5Translator, node: SourceDetails) -> None:
     title = escape(str(node["title"]))
-    translator.body.append(f'<details class="source-details"><summary>Полный код · {title}</summary>')
+    translator.body.append(
+        f'<details class="source-details"><summary class="source-header"><span class="source-label">Полный код · {title}</span></summary>'
+    )
 
 
 def depart_source(translator: HTML5Translator, node: SourceDetails) -> None:

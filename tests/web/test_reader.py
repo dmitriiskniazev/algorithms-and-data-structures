@@ -81,6 +81,6 @@ def test_reader_selection_and_settings_models() -> None:
 
 @pytest.mark.skipif(shutil.which("node") is None, reason="Node is needed for JavaScript syntax checks")
 def test_all_reader_modules_parse() -> None:
-    for path in (ROOT / "docs/_static/reader").rglob("*.js"):
+    for path in [*(ROOT / "docs/_static/reader").rglob("*.js"), ROOT / "docs/_static/course-code.mjs"]:
         result = subprocess.run(["node", "--check", str(path)], capture_output=True, text=True)
         assert result.returncode == 0, result.stdout + result.stderr

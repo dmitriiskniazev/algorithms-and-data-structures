@@ -25,8 +25,9 @@ html_css_files = [
     "reader/settings/panel.css",
     "reader/code_viewer/view.css",
     "reader/view.css",
+    "reader/source.css",
 ]
-html_js_files = ["course-print.js", "course-code.js", ("reader/start.js", {"type": "module"})]
+html_js_files = ["course-print.js", ("course-code.mjs", {"type": "module"}), ("reader/start.js", {"type": "module"})]
 templates_path = ["_templates"]
 html_sidebars = {"**": ["course-navigation.html"]}
 html_theme_options = {"show_powered_by": False, "show_related": True}

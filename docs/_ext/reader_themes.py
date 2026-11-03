@@ -68,6 +68,8 @@ def build_themes(catalog_path: Path, target: Path) -> None:
             "wash": surface,
             "sidebar": surface,
             "code": bg,
+            "code-surface": mix(bg, fg, 0.065 if dark else 0.035),
+            "code-header": mix(bg, fg, 0.12 if dark else 0.07),
             "focus": "#8ac9ff" if dark else "#0757a8",
             "diff-added": mix(bg, "#1b813e", 0.3 if dark else 0.12),
             "diff-removed": mix(bg, "#b22222", 0.3 if dark else 0.08),
