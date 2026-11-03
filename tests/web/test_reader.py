@@ -4,16 +4,19 @@ import json
 import shutil
 import subprocess
 from html.parser import HTMLParser
+from importlib.resources import files
 from pathlib import Path
+from types import ModuleType
 
 import pytest
+from course_engine import copy_assets
 from docutils import nodes
 from docutils.utils import new_document
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def source_module():
+def source_module() -> ModuleType:
     path = ROOT / "docs/_ext/reader_sources.py"
     spec = importlib.util.spec_from_file_location("reader_sources_test", path)
     assert spec is not None and spec.loader is not None
@@ -61,7 +64,7 @@ def test_highlighted_lines_preserve_every_python_source() -> None:
 
 
 def test_all_shipped_font_faces_match_the_catalog() -> None:
-    root = ROOT / "docs/_static/fonts"
+    root = files("course_engine").joinpath("resources/fonts")
     fonts = json.loads((root / "catalog.json").read_text())
     assert len(fonts) == 9
     for font in fonts:
@@ -72,15 +75,24 @@ def test_all_shipped_font_faces_match_the_catalog() -> None:
 
 
 @pytest.mark.skipif(shutil.which("node") is None, reason="Node is needed for JavaScript model checks")
-def test_reader_selection_and_settings_models() -> None:
+def test_reader_selection_and_settings_models(tmp_path: Path) -> None:
+    reader = tmp_path / "reader"
+    shutil.copytree(ROOT / "docs/_static/reader", reader)
+    copy_assets(reader, tmp_path / "fonts")
     result = subprocess.run(
-        ["node", str(Path(__file__).with_name("reader_models.mjs"))], cwd=ROOT, capture_output=True, text=True
+        ["node", str(Path(__file__).with_name("reader_models.mjs")), reader.as_uri()],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
     )
     assert result.returncode == 0, result.stdout + result.stderr
 
 
 @pytest.mark.skipif(shutil.which("node") is None, reason="Node is needed for JavaScript syntax checks")
-def test_all_reader_modules_parse() -> None:
-    for path in [*(ROOT / "docs/_static/reader").rglob("*.js"), ROOT / "docs/_static/course-code.mjs"]:
+def test_all_reader_modules_parse(tmp_path: Path) -> None:
+    reader = tmp_path / "reader"
+    shutil.copytree(ROOT / "docs/_static/reader", reader)
+    copy_assets(reader, tmp_path / "fonts")
+    for path in [*reader.rglob("*.js"), ROOT / "docs/_static/course-code.mjs"]:
         result = subprocess.run(["node", "--check", str(path)], capture_output=True, text=True)
         assert result.returncode == 0, result.stdout + result.stderr

@@ -3,9 +3,10 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 // Catalogs are local course assets; model tests never access the network.
 globalThis.fetch = async (url) => ({ ok: true, json: async () => JSON.parse(await readFile(fileURLToPath(url), 'utf8')) });
-const { selection, align, displayRows } = await import('../../docs/_static/reader/code_viewer/model.js');
-const { normalize } = await import('../../docs/_static/reader/settings/schema.js');
-const { importVSCode, parseJSONC } = await import('../../docs/_static/reader/settings/vscode.js');
+const reader = new URL(process.argv[2] + "/");
+const { selection, align, displayRows } = await import(new URL("code_viewer/model.js", reader));
+const { normalize } = await import(new URL("settings/schema.js", reader));
+const { importVSCode, parseJSONC } = await import(new URL("settings/vscode.js", reader));
 const sources = [{path:'recursive.py',group:'fibonacci',common:false}, {path:'memoized.py',group:'fibonacci',common:false}, {path:'types.py',group:'shared',common:true}];
 assert.equal(selection(sources,'?view=code').first,sources[0]);
 assert.equal(selection(sources,'?view=code').second,sources[1]);

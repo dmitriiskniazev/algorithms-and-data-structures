@@ -1,6 +1,7 @@
 import { createPreferences } from "./settings/preferences.js";
+import * as storage from "./settings/storage.js";
 import { createSettingsPanel } from "./settings/panel.js";
-import { createCodeViewer } from "./code_viewer/view.js";
+import { createCodeViewer } from "./code_viewer/viewer.js";
 import { selection } from "./code_viewer/model.js";
 
 function initialize() {
@@ -21,7 +22,7 @@ if (search) {
 }
 
 const payload = document.querySelector("#reader-sources");
-if (!payload) { createPreferences(() => {}); return; }
+if (!payload) { createPreferences(() => {}, storage); return; }
 const status = document.querySelector("#reader-status");
 try {
   const sources = JSON.parse(payload.textContent);
@@ -34,7 +35,7 @@ try {
     if (source) source.classList.add("source-code");
   });
   let viewer;
-  const preferences = createPreferences(() => viewer?.refresh());
+  const preferences = createPreferences(() => viewer?.refresh(), storage);
   function render(focusId) {
     const state = selection(sources, location.search);
     material.hidden = state.view === "code";
@@ -59,7 +60,7 @@ try {
   }
   viewer = createCodeViewer(workspace, sources, preferences, choose);
   preferences.subscribe(() => { viewer.refresh(); preferences.refresh(); });
-  createSettingsPanel(preferences);
+  createSettingsPanel(preferences, { inertSelector: ".workspace, .sphinxsidebar" });
   document.querySelectorAll("[data-reader-view]").forEach((button) => button.addEventListener("click", () => {
     const url = new URL(location.href);
     url.searchParams.set("view", button.dataset.readerView);

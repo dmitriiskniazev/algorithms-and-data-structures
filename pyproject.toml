@@ -14,6 +14,9 @@ build-backend = "uv_build"
 module-name = ["algorithms", "data_structures"]
 namespace = true
 
+[tool.uv.sources]
+course-engine = { git = "https://github.com/dmitriiskniazev/course-engine", rev = "9238e04d05dbf295635ede6888f09e4bc0706cc4" }
+
 [tool.ruff]
 line-length = 120
 target-version = "py315"
@@ -41,6 +44,7 @@ dev = [
     "ruff>=0.17.3,<0.18",
 ]
 docs = [
+    "course-engine",
     "myst-parser>=4.0",
     "sphinx>=8.2",
     "sphinx-design>=0.6,<1",

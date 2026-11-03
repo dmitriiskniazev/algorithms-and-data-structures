@@ -3,14 +3,11 @@
 import ast
 import json
 from collections import deque
-from html import escape
 from pathlib import Path
 from typing import TypedDict
 
+from course_engine import highlighted_lines
 from docutils import nodes
-from pygments import lex
-from pygments.lexers import PythonLexer
-from pygments.token import STANDARD_TYPES
 
 
 class Source(TypedDict):
@@ -20,23 +17,6 @@ class Source(TypedDict):
     code: str
     lines: list[str]
     common: bool
-
-
-def highlighted_lines(code: str) -> list[str]:
-    lines = [""]
-    for kind, value in lex(code, PythonLexer(ensurenl=False, stripnl=False)):
-        while kind not in STANDARD_TYPES:
-            kind = kind.parent
-        css = STANDARD_TYPES[kind]
-        for i, part in enumerate(value.split("\n")):
-            if i:
-                lines.append("")
-            if part:
-                text = escape(part)
-                lines[-1] += f'<span class="{css}">{text}</span>' if css else text
-    if code.endswith("\n"):
-        lines.pop()
-    return lines
 
 
 def resolve_module(src: Path, name: str) -> Path | None:

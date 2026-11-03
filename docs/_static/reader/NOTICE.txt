@@ -1,4 +1,4 @@
-Reader settings, theme catalog and code presentation adapted from the adjacent design-patterns course.
+Reader settings, themes, fonts and code presentation are supplied by course-engine. The Sphinx adapter remains in this course. Shared resources were originally adapted from design-patterns.
 
 Verdandi / Verdandi Alter palette adapted from
 https://github.com/be5invis/vsc-theme-verdandi (themes/*.json, v2.0.1).

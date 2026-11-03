@@ -38,3 +38,23 @@ make docs
 
 
 В каждой теме доступны **Разбор**, **Код** и **Настройки**. В Коде выберите реализацию и при необходимости второй файл для сравнения. [Пример: варианты Фибоначчи](https://dmitriiskniazev.github.io/algorithms-and-data-structures/algorithms/fibonacci.html?view=code). Панель настроек содержит 22 темы, 9 локальных шрифтов, размер/интервалы, номера и направляющие, перенос, ширину, сравнение и импорт VS Code. Настройки хранятся на устройстве.
+
+## Общий интерфейс
+
+Настройки, темы, локальные шрифты с лицензиями и просмотр исходников поставляет
+[course-engine](https://github.com/dmitriiskniazev/course-engine) из группы `docs`.
+Сейчас зафиксирован коммит `9238e04d05dbf295635ede6888f09e4bc0706cc4` в `pyproject.toml` и `uv.lock`.
+`make docs` копирует пакетные ресурсы только в генерируемый результат Sphinx;
+Markdown, формулы, literalinclude, маршруты страниц и выбор исходников сохраняет
+адаптер `docs/_ext/course.py`.
+
+Обновление после проверки нового коммита на обоих курсах:
+
+```sh
+uv add --group docs 'course-engine @ git+https://github.com/dmitriiskniazev/course-engine' --rev '<full-sha>'
+uv sync --locked --all-groups
+make check
+```
+
+Сохраните `pyproject.toml` и `uv.lock` вместе с адаптером. Соседний checkout
+движка и локальный wheel не требуются. Откат — возврат предыдущего SHA/lock и адаптера.
