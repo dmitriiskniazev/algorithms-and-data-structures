@@ -3,9 +3,9 @@
 from html import escape
 from pathlib import Path, PurePosixPath
 
+from course_engine import build_themes, copy_assets
 from docutils import nodes
 from reader_sources import sources_json
-from reader_themes import build_themes
 from sphinx.application import Sphinx
 from sphinx.directives.code import LiteralInclude
 from sphinx.writers.html5 import HTML5Translator
@@ -52,9 +52,14 @@ class CourseInclude(LiteralInclude):
 
 
 def reader_assets(app: Sphinx) -> None:
-    target = Path(app.outdir) / "_static/reader/themes"
-    target.mkdir(parents=True, exist_ok=True)
-    build_themes(Path(app.srcdir) / "_static/reader/themes/catalog.json", target)
+    if app.builder.format != "html":
+        return
+    # Stage installed assets before HTML rendering so Sphinx can compute its
+    # normal content hashes. The stage is generated, never part of docs/_static.
+    static = Path(app.doctreedir) / "course_engine_static"
+    copy_assets(static / "reader", static / "fonts")
+    build_themes(static / "reader/themes")
+    app.config.html_static_path.append(str(static))
 
 
 def reader_context(
