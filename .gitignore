@@ -1,16 +1,13 @@
-# CMake / C++
-/build/
-/cmake-build-*/
-CMakeUserPresets.json
-
 # Python / uv
 __pycache__/
 *.py[cod]
 /.venv/
 .pytest_cache/
 .ruff_cache/
+/.cache/
+/dist/
 
-# Diplodoc output
+# Sphinx output
 /docs/_build/
 
 # CodeGraph generated index

@@ -1,10 +1,41 @@
-# Простые сортировки
+# Сортировки
 
-Разберём три способа отсортировать изменяемую последовательность на месте. Во всех примерах порядок задаётся сравнением: Python принимает `key` и `reverse`, C++ — `comp` и `proj`.
+## Задача
 
-Python-алгоритмы вычисляют `key` один раз на элемент. Для этого хранится параллельный массив ключей, поэтому при переданном `key` дополнительная память составляет O(n); без `key` алгоритм работает с исходными значениями напрямую.
+Переставьте значения по возрастанию, сохранив все исходные элементы. Сравните способы построения отсортированной последовательности.
+
+:::{container} task-facts
+
+**Вход.** [3, 1, 2, 1]
+
+**Результат.** [1, 1, 2, 3]; сортируется переданная последовательность.
+
+:::
+
+**Предусловия.** Для сравнительных сортировок `<` задаёт строгий слабый порядок. Для Counting/Radix значения — неотрицательные целые.
+
+### Проверка
+
+Запустите пример: утверждения фиксируют ожидаемое поведение.
+
+```python
+from algorithms.sorting import insertion_sort
+
+values = [3, 1, 2, 1]
+insertion_sort.sort(values)
+assert values == [1, 1, 2, 3]
+```
+
+Разберём три способа отсортировать изменяемую последовательность на месте. Сравнительные сортировки упорядочивают значения по возрастанию, используя только `<`.
+
+Предусловие сравнительных сортировок: `<` задаёт строгий слабый порядок на значениях. Эквивалентность означает `not a < b and not b < a`. Сортировки подсчётом и по разрядам работают с неотрицательными целыми числами.
 
 ## Bubble Sort
+
+```{literalinclude} ../../src/algorithms/sorting/bubble_sort.py
+:language: python
+:caption: src/algorithms/sorting/bubble_sort.py
+```
 
 На каждом проходе сравниваем соседние элементы и меняем их местами, если соседняя пара нарушает нужный порядок. Самый большой по выбранному порядку элемент проходит к концу неотсортированной части. Если проход не сделал обменов, последовательность уже упорядочена.
 
@@ -12,43 +43,65 @@ Python-алгоритмы вычисляют `key` один раз на элем
 
 После каждого прохода наибольший элемент неотсортированной части оказывается на её последней позиции. Поэтому уже обработанный суффикс отсортирован и может быть исключён из следующего прохода; проход без обменов означает, что отсортирована вся последовательность.
 
-```{literalinclude} ../../impl/python/src/algorithms/sorting/bubble_sort/bubble_sort.py
-:language: python
-:caption: impl/python/src/algorithms/sorting/bubble_sort/bubble_sort.py
-```
+Процедура `_pass` возвращает позицию последнего обмена: суффикс справа уже находится на окончательных местах.
 
-```{literalinclude} ../../impl/cpp/src/algorithms/sorting/bubble_sort/bubble_sort.cppm
-:language: cpp
-:caption: impl/cpp/src/algorithms/sorting/bubble_sort/bubble_sort.cppm
-```
-
-В Python тесты: `impl/python/tests/algorithms/sorting/bubble_sort/test_bubble_sort.py`. В C++: `impl/cpp/tests/algorithms/sorting/bubble_sort/test_bubble_sort.cpp`.
+В Python тесты: `tests/algorithms/sorting/test_bubble_sort.py`.
 
 - Время: лучший случай O(n), худший O(n²).
-- Дополнительная память: O(1) в C++ и в Python без `key`; O(n) для Python-кэша `key`.
+- Дополнительная память: O(1).
+
+## Counting Sort
+
+```{literalinclude} ../../src/algorithms/sorting/counting_sort.py
+:language: python
+:caption: src/algorithms/sorting/counting_sort.py
+```
+
+Алгоритм предназначен для неотрицательных целых чисел. Сначала он считает частоты, затем превращает их в позиции окончания корзин. Обход входа справа налево делает размещение стабильным.
+
+Стабильность следует из обратного прохода: среди элементов с одним ключом последний встреченный занимает последнюю свободную позицию своей корзины. Проверка всех ключей выполняется до изменения входа.
+
+Тесты: `tests/algorithms/sorting/test_non_comparison_sorts.py`.
+
+- Время и память: Θ(n + k), где `k = max(values) + 1` для непустого входа.
+- Сортировка устойчива; подходит, когда диапазон ключей сравним с размером входа.
+
+## LSD Radix Sort
+
+```{literalinclude} ../../src/algorithms/sorting/radix_sort.py
+:language: python
+:caption: src/algorithms/sorting/radix_sort.py
+```
+
+LSD сортировка обрабатывает байты ключа от младшего к старшему, выполняя на каждом шаге стабильную сортировку по текущему байту. Индуктивно после `j` проходов элементы упорядочены по младшим `j` байтам; после `d` проходов порядок полный. Устойчивость каждого прохода необходима.
+
+Здесь основание `b = 256`, а `d` — число байтов в максимальном ключе (для нулевых ключей выполняется один проход). Допустимость чисел проверяется до перестановок.
+
+- Время: Θ(d(n + 256)); дополнительная память: Θ(n + 256).
+- Это не сравнивающая сортировка: нижняя граница Ω(n log n) для сортировки сравнением к ней не относится, но цена зависит от представления и длины ключей.
 
 ## Insertion Sort
+
+```{literalinclude} ../../src/algorithms/sorting/insertion_sort.py
+:language: python
+:caption: src/algorithms/sorting/insertion_sort.py
+```
 
 Поддерживаем отсортированный префикс. Берём следующий элемент и двигаем его влево, пока предыдущий элемент должен находиться после него. Равные элементы не пересекаются, поэтому алгоритм стабилен.
 
 Перед каждой итерацией префикс до текущей позиции отсортирован. Сдвиги сохраняют порядок его элементов, а остановка на первом элементе, который не должен идти после вставляемого, помещает новый элемент в правильную позицию и сохраняет инвариант.
 
-```{literalinclude} ../../impl/python/src/algorithms/sorting/insertion_sort/insertion_sort.py
-:language: python
-:caption: impl/python/src/algorithms/sorting/insertion_sort/insertion_sort.py
-```
-
-```{literalinclude} ../../impl/cpp/src/algorithms/sorting/insertion_sort/insertion_sort.cppm
-:language: cpp
-:caption: impl/cpp/src/algorithms/sorting/insertion_sort/insertion_sort.cppm
-```
-
-В Python тесты: `impl/python/tests/algorithms/sorting/insertion_sort/test_insertion_sort.py`. В C++: `impl/cpp/tests/algorithms/sorting/insertion_sort/test_insertion_sort.cpp`.
+В Python тесты: `tests/algorithms/sorting/test_insertion_sort.py`.
 
 - Время: лучший случай O(n), средний и худший O(n²).
-- Дополнительная память: O(1) в C++ и в Python без `key`; O(n) для Python-кэша `key`.
+- Дополнительная память: O(1).
 
 ## Selection Sort
+
+```{literalinclude} ../../src/algorithms/sorting/selection_sort.py
+:language: python
+:caption: src/algorithms/sorting/selection_sort.py
+```
 
 На позиции i находим наименьший элемент оставшегося суффикса и меняем его местами с элементом на позиции i. Число сравнений почти не зависит от начального порядка: каждый проход просматривает весь суффикс.
 
@@ -56,18 +109,12 @@ Selection Sort не является стабильной сортировкой
 
 Перед каждой итерацией префикс содержит минимальные элементы всей последовательности в правильном порядке. Поиск минимума в суффиксе и обмен с его первым элементом расширяют этот префикс на один элемент.
 
-```{literalinclude} ../../impl/python/src/algorithms/sorting/selection_sort/selection_sort.py
-:language: python
-:caption: impl/python/src/algorithms/sorting/selection_sort/selection_sort.py
-```
-
-```{literalinclude} ../../impl/cpp/src/algorithms/sorting/selection_sort/selection_sort.cppm
-:language: cpp
-:caption: impl/cpp/src/algorithms/sorting/selection_sort/selection_sort.cppm
-```
-
-В Python тесты: `impl/python/tests/algorithms/sorting/selection_sort/test_selection_sort.py`. В C++: `impl/cpp/tests/algorithms/sorting/selection_sort/test_selection_sort.cpp`.
+В Python тесты: `tests/algorithms/sorting/test_selection_sort.py`.
 
 - Время: Θ(n²) сравнений в лучшем, среднем и худшем случаях.
 - Обмены: не более n − 1.
-- Дополнительная память: O(1) в C++ и в Python без `key`; O(n) для Python-кэша `key`.
+- Дополнительная память: O(1).
+
+## Merge Sort
+
+Сортировка слиянием находится в `algorithms.sorting.merge_sort`; [идея, код и доказательство](divide-and-conquer.md#merge-sort) разобраны вместе с рекуррентностью её времени. Вызов: `merge_sort.sort(values)`.

@@ -1,18 +1,19 @@
 # Алгоритмы и структуры данных
 
-Учебный курс по алгоритмам и структурам данных. Первая тема — Bubble Sort, Insertion Sort и Selection Sort. Следующие темы добавляются по плану пользователя. Стартовая страница курса находится в [`docs/`](docs/index.md).
+[Открыть курс](https://dmitriiskniazev.github.io/algorithms-and-data-structures/) · [Все темы](https://dmitriiskniazev.github.io/algorithms-and-data-structures/curriculum.html)
 
-## Будущие реализации
+Учебный курс на Python 3.15+. [Стартовая страница](docs/index.md), [учебный план](docs/curriculum.md), [карта реализаций](docs/implementations.md) и [руководство автора](docs/authoring.md) находятся в `docs/`. Темы и их последовательность задаёт пользователь.
 
-- Python: `impl/python/src/algorithms/<topic>/<algorithm>/` и `impl/python/tests/`.
-- C++: `impl/cpp/src/algorithms/<topic>/<algorithm>/` и `impl/cpp/tests/`.
-- Структуры данных: `impl/<language>/src/data-structures/<structure>/` и соответствующее дерево `impl/<language>/tests/`.
+Начать практику можно с [цепочки задач на стеки и очереди](docs/data-structures/construction.md): массивы, композиция структур, минимум, персистентность и история версий.
 
-Реализации первых трёх сортировок находятся в `impl/{python,cpp}/src/algorithms/sorting/`, тесты — в соответствующих `tests/` деревьях.
+## Расположение материалов
 
-Каталоги создаются с первой реализацией; пустые заглушки не хранятся. Python использует uv и требует Python 3.15+. C++ использует C++26, CMake, Ninja, named modules и `import std;`.
+- Алгоритмы: `src/algorithms/`; структуры данных: `src/data_structures/`.
+- Тесты: `tests/` с тем же деревом тем и сущностей.
+- Лекции: `docs/algorithms/` и `docs/data-structures/`; код подключается из проверяемых исходников через `literalinclude`.
+- Требования и история изменений: `openspec/specs/` и `openspec/changes/`.
 
-Для C++ в VS Code используются CMake Tools и рекомендуемое расширение clangd. `make setup-cpp` подготавливает `build/cpp/compile_commands.json`; поддержка модулей в clangd экспериментальная. Локальные настройки лежат в `.vscode/` и не входят в git.
+Каталоги появляются вместе с содержательным исходником или тестом; пустые заглушки не хранятся. Зависимости и окружение управляются через uv. Документация собирается только в HTML.
 
 ## Команды
 
@@ -22,6 +23,15 @@ make test
 make docs
 ```
 
-Команда собирает сайт в `docs/_build/html/`. Для локального просмотра можно выполнить `uv run python -m http.server 8000 --directory docs/_build/html` и открыть `http://localhost:8000`.
+Прямые команды uv: `uv sync --all-groups --locked` для установки проекта и зависимостей, `uv run --locked python -m pytest` для тестов. Проект использует `uv_build`; модули `algorithms` и `data_structures` устанавливаются из `src/`, ручной `PYTHONPATH` не нужен. `uv build` создаёт дистрибутивы в `dist/`.
 
-Пока тестов нет, `make test` сообщает об этом и завершается успешно. Правила курса, кода и OpenSpec — в [AGENTS.md](AGENTS.md).
+`make check` проверяет Ruff, типы всего `src/` через Pyright, тесты и HTML. Отдельно: `uv run --locked pyright`, `make lint`, `make format`. Правила имён и аннотаций описаны в [руководстве автора](docs/authoring.md).
+
+`make docs` собирает сайт в `docs/_build/html/`. Для локального просмотра: `uv run python -m http.server 8000 --directory docs/_build/html`, затем `http://localhost:8000`.
+
+`make clean` удаляет HTML-сборку и локальные кеши. Окружение `.venv/` и индекс CodeGraph сохраняются.
+
+Правила курса, кода и OpenSpec — в [AGENTS.md](AGENTS.md).
+
+
+Публикация выполняется GitHub Actions после успешного `make check`: Sphinx собирает HTML, Pages развёртывает его под префиксом проекта. Workflow запускается при изменениях курса в main и вручную через **Actions → Publish course → Run workflow**.

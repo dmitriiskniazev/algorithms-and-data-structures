@@ -1,27 +1,67 @@
 # Алгоритмы и структуры данных
 
-Учебный курс по алгоритмам и структурам данных. Темы добавляются по плану пользователя; первый раздел посвящён простым сортировкам.
+Учебный курс по алгоритмам и структурам данных. Его порядок и полный состав разделов зафиксированы в [учебном плане](curriculum.md).
+
+```{toctree}
+:maxdepth: 1
+:caption: Программа курса
+
+curriculum
+implementations
+```
 
 ```{toctree}
 :maxdepth: 2
 :caption: Алгоритмы
 
+algorithms/analysis
 algorithms/sorting
+algorithms/binary-search
+algorithms/divide-and-conquer
+algorithms/graph-traversal
+algorithms/strings
+algorithms/fibonacci
+algorithms/dynamic-programming
+algorithms/greedy
+algorithms/graph-algorithms
+algorithms/complexity
+algorithms/quick-sort
+algorithms/heap-sort
+algorithms/order-statistics
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: Структуры данных
+
+data-structures/interfaces
+data-structures/construction
+data-structures/heap
+data-structures/stack
+data-structures/queue-deque
+data-structures/extrema
+data-structures/trees-and-hashing
 ```
 
 ## Техническая основа
 
+Образец последовательной подачи — [Фибоначчи: от рекурсии к двум переменным](algorithms/fibonacci.md). Принципы оформления и работы с кодом описаны в [руководстве автора](authoring.md).
+
+```{toctree}
+:hidden:
+
+authoring
+```
+
 - Python 3.15+, зависимости и тесты управляются через `uv`.
-- C++26 собирается через CMake и использует named modules и `import std;`.
 - Учебная документация собирается Sphinx из Markdown с MyST.
 
-## Расположение будущего кода
+## Расположение кода
 
-- Python: `impl/python/src/algorithms/` и `impl/python/src/data-structures/`; тесты — `impl/python/tests/`.
-- C++: `impl/cpp/src/algorithms/` и `impl/cpp/src/data-structures/`; тесты — `impl/cpp/tests/`.
+- Python: `src/algorithms/` и `src/data_structures/`; тесты — `tests/`.
 - Общая теория и ход курса — `docs/`.
 
-Каталоги и файлы будут появляться вместе с первой согласованной темой; пустые заглушки не создаются.
+Код на страницах подключается непосредственно из исходников через literalinclude. После правок выполните `make docs`, чтобы обновить собранный HTML. Пустые заглушки не создаются.
 
 ## Команды
 

@@ -6,13 +6,46 @@ readme = "README.md"
 requires-python = ">=3.15"
 dependencies = []
 
-[tool.uv]
-package = false
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["algorithms", "data_structures"]
+namespace = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py315"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "ANN"]
+
+[tool.pyright]
+include = ["src", "tests/typing/accepted.py"]
+pythonVersion = "3.15"
+typeCheckingMode = "strict"
+reportUnnecessaryIsInstance = false
+reportPrivateUsage = false
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
 
 [dependency-groups]
-dev = ["pytest>=8.0"]
-docs = ["myst-parser>=4.0", "sphinx>=8.2"]
+dev = [
+    "pyright>=1.1.414,<2",
+    "pytest>=8.0",
+    "ruff>=0.17.3,<0.18",
+]
+docs = [
+    "myst-parser>=4.0",
+    "sphinx>=8.2",
+    "sphinx-design>=0.6,<1",
+]
 
 [tool.pytest.ini_options]
-pythonpath = ["impl/python/src"]
-testpaths = ["impl/python/tests"]
+addopts = "--import-mode=importlib"
+testpaths = ["tests"]
