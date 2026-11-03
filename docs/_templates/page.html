@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="reader-topbar" hidden>
+  <p class="reader-title">{{ title|striptags|e }}</p>
+  <nav class="mode-tabs" aria-label="Режим страницы">
+    <button type="button" data-reader-view="read" aria-pressed="true">Разбор</button>
+    <button type="button" data-reader-view="code" aria-pressed="false">Код</button>
+  </nav>
+  <button id="settings-toggle" class="subtle-button" type="button" aria-controls="settings-panel" aria-expanded="false">Настройки</button>
+</div>
+<p id="reader-status" role="status" hidden></p>
+<div id="lesson-material">{{ body }}</div>
+<section id="code-workspace" class="code-workspace" aria-label="Выбор и сравнение реализаций" hidden></section>
+<script id="reader-sources" type="application/json">{{ reader_sources|default('[]')|safe }}</script>
+{% endblock %}

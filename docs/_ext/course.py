@@ -1,9 +1,11 @@
 """Source presentation for the HTML course."""
 
 from html import escape
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 
 from docutils import nodes
+from reader_sources import sources_json
+from reader_themes import build_themes
 from sphinx.application import Sphinx
 from sphinx.directives.code import LiteralInclude
 from sphinx.writers.html5 import HTML5Translator
@@ -32,6 +34,8 @@ class CourseInclude(LiteralInclude):
         blocks = [block for node in result for block in node.findall(nodes.literal_block)]
         if not blocks:
             return result
+        for block in blocks:
+            block["course_path"] = title
         lines = sum(bool(line.strip()) for block in blocks for line in block.astext().splitlines())
         if lines <= 24:
             return result
@@ -45,7 +49,21 @@ class CourseInclude(LiteralInclude):
         return [wrapper]
 
 
-def setup(app: Sphinx) -> dict[str, bool]:
+def reader_assets(app: Sphinx) -> None:
+    target = Path(app.outdir) / "_static/reader/themes"
+    target.mkdir(parents=True, exist_ok=True)
+    build_themes(Path(app.srcdir) / "_static/reader/themes/catalog.json", target)
+
+
+def reader_context(
+    app: Sphinx, pagename: str, templatename: str, context: dict[str, object], doctree: nodes.document | None
+) -> None:
+    context["reader_sources"] = sources_json(Path(app.srcdir).parent, doctree)
+
+
+def setup(app: Sphinx) -> dict[str, object]:
     app.add_node(SourceDetails, html=(visit_source, depart_source))
     app.add_directive("literalinclude", CourseInclude, override=True)
-    return {"parallel_read_safe": True, "parallel_write_safe": True}
+    app.connect("builder-inited", reader_assets)
+    app.connect("html-page-context", reader_context)
+    return {"env_version": 1, "parallel_read_safe": True, "parallel_write_safe": True}

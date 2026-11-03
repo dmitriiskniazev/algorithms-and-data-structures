@@ -1,0 +1,260 @@
+[
+  {
+    "family": "JetBrains Mono",
+    "path": "jetbrains_mono/JetBrainsMono-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/JetBrainsMono-Italic[wght].ttf",
+    "git_blob": "5210f7350c95eef62d53de85b5953f4d5ff022ec"
+  },
+  {
+    "family": "JetBrains Mono",
+    "path": "jetbrains_mono/JetBrainsMono[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/JetBrainsMono[wght].ttf",
+    "git_blob": "aa310be8b717fe3774f9444dd89d5f4101cc6d10"
+  },
+  {
+    "family": "JetBrains Mono",
+    "path": "jetbrains_mono/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/OFL.txt",
+    "git_blob": "821a3dac22aff15a1f1c9689a1d79c45bb58ca39"
+  },
+  {
+    "family": "Fira Code",
+    "path": "fira_code/FiraCode[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/firacode/FiraCode[wght].ttf",
+    "git_blob": "83f2b3875f734f135154f18bb4f13d4075186927"
+  },
+  {
+    "family": "Fira Code",
+    "path": "fira_code/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/firacode/OFL.txt",
+    "git_blob": "67a0efa49f31cd2e9843a03d49e21fb400a450b3"
+  },
+  {
+    "family": "Source Code Pro",
+    "path": "source_code_pro/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/OFL.txt",
+    "git_blob": "d154618a7d0ca5a850c562e04f634ab2d218ee92"
+  },
+  {
+    "family": "Source Code Pro",
+    "path": "source_code_pro/SourceCodePro-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/SourceCodePro-Italic[wght].ttf",
+    "git_blob": "f4321e7352540d2aa33023e19d9a65c447c5590a"
+  },
+  {
+    "family": "Source Code Pro",
+    "path": "source_code_pro/SourceCodePro[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/sourcecodepro/SourceCodePro[wght].ttf",
+    "git_blob": "4d668281b3b2c6d699b5569e49bd60121152125f"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Bold.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Bold.ttf",
+    "git_blob": "17b406d221e7f27179344707bd543fb8470728ac"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-BoldItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-BoldItalic.ttf",
+    "git_blob": "f0291778c969fca0c255fe7e06c90eb97b34770d"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-ExtraLight.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-ExtraLight.ttf",
+    "git_blob": "26877b8175e03ac26581afb2bf0eb4f7b9190594"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-ExtraLightItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-ExtraLightItalic.ttf",
+    "git_blob": "bd50df2f9d7397e9772c75836277023d6e8e95b1"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Italic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Italic.ttf",
+    "git_blob": "d7f69134614ebdcaa10ebd36b0be1a44a035e157"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Light.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Light.ttf",
+    "git_blob": "61d43577842179cdffeb38b6c1928786981db0da"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-LightItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-LightItalic.ttf",
+    "git_blob": "ecb1f6f52575afd8296df722ed4e7b395f9847b0"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Medium.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "git_blob": "33c546f68b6007a45a3f10e845523abb2db25399"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-MediumItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-MediumItalic.ttf",
+    "git_blob": "d08961658e199bcabdb2fcb4f59abf06ab599fb3"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Regular.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+    "git_blob": "0c9770d5183ba60dc4350d3e011b782a320761ae"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-SemiBold.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-SemiBold.ttf",
+    "git_blob": "8f8998a139d8f61d3b96bdd3b512fca501a1f6b9"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-SemiBoldItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-SemiBoldItalic.ttf",
+    "git_blob": "50e47fa895a99c816061ad3b2bf433850a5f713b"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-Thin.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-Thin.ttf",
+    "git_blob": "44475c9d3e39e6f7e211ff7ce8a6fa711ab307ea"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/IBMPlexMono-ThinItalic.ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/IBMPlexMono-ThinItalic.ttf",
+    "git_blob": "89eac6d51d5fb51874f1404980d64bd3f482f4a5"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "path": "ibm_plex_mono/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/ibmplexmono/OFL.txt",
+    "git_blob": "c35c4c618fab33da8695177b3a6cefe0810b7b28"
+  },
+  {
+    "family": "Roboto Mono",
+    "path": "roboto_mono/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/robotomono/OFL.txt",
+    "git_blob": "8e7df338d36eb52c49548ecc58afcb7eb3f73898"
+  },
+  {
+    "family": "Roboto Mono",
+    "path": "roboto_mono/RobotoMono-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/robotomono/RobotoMono-Italic[wght].ttf",
+    "git_blob": "414a5121f4ca743f0c64e82e22d91e426aa7d432"
+  },
+  {
+    "family": "Roboto Mono",
+    "path": "roboto_mono/RobotoMono[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/robotomono/RobotoMono[wght].ttf",
+    "git_blob": "f21d1d716bce3cc756bc618d32be71ce6f733f81"
+  },
+  {
+    "family": "Ubuntu Sans Mono",
+    "path": "ubuntu_sans_mono/LICENCE.txt",
+    "source": "https://github.com/google/fonts/blob/main/ufl/ubuntusansmono/LICENCE.txt",
+    "git_blob": "ae78a8f94eae372cb1ca4e14b67244342fce604e"
+  },
+  {
+    "family": "Ubuntu Sans Mono",
+    "path": "ubuntu_sans_mono/UbuntuSansMono-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ufl/ubuntusansmono/UbuntuSansMono-Italic[wght].ttf",
+    "git_blob": "f4ff323c8b074a6be7d48a45c053f918773efb4e"
+  },
+  {
+    "family": "Ubuntu Sans Mono",
+    "path": "ubuntu_sans_mono/UbuntuSansMono[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ufl/ubuntusansmono/UbuntuSansMono[wght].ttf",
+    "git_blob": "bbc549ff4b434b5703cd6355c772f1f20b773aa9"
+  },
+  {
+    "family": "Geist Mono",
+    "path": "geist_mono/GeistMono-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/geistmono/GeistMono-Italic[wght].ttf",
+    "git_blob": "9a0d8997e9686aafcbef468b7b985b310d5a4202"
+  },
+  {
+    "family": "Geist Mono",
+    "path": "geist_mono/GeistMono[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/geistmono/GeistMono[wght].ttf",
+    "git_blob": "173867dce0580ea751e4b9c558740d34f20ce549"
+  },
+  {
+    "family": "Geist Mono",
+    "path": "geist_mono/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/geistmono/OFL.txt",
+    "git_blob": "61f6f4b7853081236aec6407f2dd3c7170997f84"
+  },
+  {
+    "family": "Cascadia Code",
+    "path": "cascadia_code/CascadiaCode-Italic[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/cascadiacode/CascadiaCode-Italic[wght].ttf",
+    "git_blob": "998bbf4395e353959e80744789eb79b9105e1a7f"
+  },
+  {
+    "family": "Cascadia Code",
+    "path": "cascadia_code/CascadiaCode[wght].ttf",
+    "source": "https://github.com/google/fonts/blob/main/ofl/cascadiacode/CascadiaCode[wght].ttf",
+    "git_blob": "b222dbdcbbd81baaeef2b40d6ddb4181ddbc535f"
+  },
+  {
+    "family": "Cascadia Code",
+    "path": "cascadia_code/OFL.txt",
+    "source": "https://github.com/google/fonts/blob/main/ofl/cascadiacode/OFL.txt",
+    "git_blob": "40f856f6ecc6de260b4065368ad2f5c4f8cbdcbc"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/LICENSE.txt",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/LICENSE.txt",
+    "git_blob": "0300a76ab6746b6effcea96441617e9e889d8576"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/MesloLGMNerdFontMono-Bold.ttf",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/MesloLGMNerdFontMono-Bold.ttf",
+    "git_blob": "dd7eb548e313b3f4ca9bffcd5454607cd1a3116d"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/MesloLGMNerdFontMono-BoldItalic.ttf",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/MesloLGMNerdFontMono-BoldItalic.ttf",
+    "git_blob": "af641cd2ddf7b43e6e87c30103213889d7fe7e1d"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/MesloLGMNerdFontMono-Italic.ttf",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/MesloLGMNerdFontMono-Italic.ttf",
+    "git_blob": "e99c3e8e521ae9276ba15b0e65c4b1f8ed75b346"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/MesloLGMNerdFontMono-Regular.ttf",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/MesloLGMNerdFontMono-Regular.ttf",
+    "git_blob": "7e789586c91a29c571be8d0e3dbb7e455d2e1db1"
+  },
+  {
+    "family": "Meslo Nerd Font",
+    "path": "meslo_nerd/README.md",
+    "source": "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/README.md",
+    "git_blob": "e00db7bc82d01b53a78f30a9d0cafe1a7036f2c6"
+  },
+  {
+    "family": "Source Code Pro",
+    "path": "source_code_pro/SourceCodeVF-Italic.ttf.woff2",
+    "source": "https://github.com/adobe-fonts/source-code-pro/blob/release/WOFF2/VF/SourceCodeVF-Italic.ttf.woff2",
+    "git_blob": "54566fec8f6cc4abfac549d1ed4a5e952f7aaae5"
+  },
+  {
+    "family": "Source Code Pro",
+    "path": "source_code_pro/SourceCodeVF-Upright.ttf.woff2",
+    "source": "https://github.com/adobe-fonts/source-code-pro/blob/release/WOFF2/VF/SourceCodeVF-Upright.ttf.woff2",
+    "git_blob": "fa87db30cd176c10c945754a50f9b1353eb1a122"
+  }
+]

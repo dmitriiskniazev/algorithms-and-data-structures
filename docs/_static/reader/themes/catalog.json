@@ -1,0 +1,176 @@
+[
+  {
+    "id": "verdandi",
+    "name": "Verdandi",
+    "kind": "light",
+    "colors": {
+      "background": "#f8f9fa",
+      "text": "#212529",
+      "comment": "#51575e",
+      "keyword": "#212529",
+      "string": "#51575e",
+      "code_text": "#51575e",
+      "name": "#212529",
+      "number": "#212529",
+      "operator": "#212529"
+    },
+    "emphasis": {
+      "keyword": "bold",
+      "string": "italic",
+      "operator": "bold"
+    }
+  },
+  {
+    "id": "verdandi_alter",
+    "name": "Verdandi Alter",
+    "kind": "dark",
+    "colors": {
+      "background": "#0f1216",
+      "text": "#d8dce0",
+      "comment": "#949ca3",
+      "keyword": "#d8dce0",
+      "string": "#949ca3",
+      "code_text": "#949ca3",
+      "name": "#b5bbc0",
+      "number": "#d8dce0",
+      "operator": "#d8dce0"
+    },
+    "emphasis": {
+      "keyword": "bold",
+      "string": "italic",
+      "operator": "bold"
+    }
+  },
+  {
+    "id": "one_light",
+    "name": "One Light",
+    "kind": "light",
+    "colors": {
+      "background": "#fafafa",
+      "text": "#383a42",
+      "comment": "#626772",
+      "keyword": "#a626a4",
+      "string": "#50a14f"
+    }
+  },
+  {
+    "id": "one_dark",
+    "name": "One Dark",
+    "kind": "dark",
+    "style": "one-dark"
+  },
+  {
+    "id": "github_light",
+    "name": "GitHub Light",
+    "kind": "light",
+    "colors": {
+      "background": "#ffffff",
+      "text": "#24292f",
+      "comment": "#57606a",
+      "keyword": "#cf222e",
+      "string": "#0a3069"
+    }
+  },
+  {
+    "id": "github_dark",
+    "name": "GitHub Dark",
+    "kind": "dark",
+    "style": "github-dark"
+  },
+  {
+    "id": "dracula",
+    "name": "Dracula",
+    "kind": "dark",
+    "style": "dracula"
+  },
+  {
+    "id": "monokai",
+    "name": "Monokai",
+    "kind": "dark",
+    "style": "monokai"
+  },
+  {
+    "id": "nord",
+    "name": "Nord",
+    "kind": "dark",
+    "style": "nord"
+  },
+  {
+    "id": "solarized_light",
+    "name": "Solarized Light",
+    "kind": "light",
+    "style": "solarized-light"
+  },
+  {
+    "id": "solarized_dark",
+    "name": "Solarized Dark",
+    "kind": "dark",
+    "style": "solarized-dark"
+  },
+  {
+    "id": "gruvbox_light",
+    "name": "Gruvbox Light",
+    "kind": "light",
+    "style": "gruvbox-light"
+  },
+  {
+    "id": "gruvbox_dark",
+    "name": "Gruvbox Dark",
+    "kind": "dark",
+    "style": "gruvbox-dark"
+  },
+  {
+    "id": "paraiso_light",
+    "name": "Paraiso Light",
+    "kind": "light",
+    "style": "paraiso-light"
+  },
+  {
+    "id": "paraiso_dark",
+    "name": "Paraiso Dark",
+    "kind": "dark",
+    "style": "paraiso-dark"
+  },
+  {
+    "id": "friendly",
+    "name": "Friendly",
+    "kind": "light",
+    "style": "friendly"
+  },
+  {
+    "id": "tango",
+    "name": "Tango",
+    "kind": "light",
+    "style": "tango"
+  },
+  {
+    "id": "vs",
+    "name": "VS",
+    "kind": "light",
+    "style": "vs"
+  },
+  {
+    "id": "xcode",
+    "name": "Xcode",
+    "kind": "light",
+    "style": "xcode"
+  },
+  {
+    "id": "zenburn",
+    "name": "Zenburn",
+    "kind": "dark",
+    "style": "zenburn"
+  },
+  {
+    "id": "native",
+    "name": "Native",
+    "kind": "dark",
+    "style": "native"
+  },
+  {
+    "id": "material",
+    "name": "Material",
+    "kind": "dark",
+    "style": "material"
+  }
+]

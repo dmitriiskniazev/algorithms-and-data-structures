@@ -1,7 +1,10 @@
 <a class="course-brand" href="{{ pathto(root_doc) }}">Алгоритмы и структуры данных</a>
 <details class="course-catalog" open>
   <summary>Все темы</summary>
-  <nav aria-label="Программа курса">
+  <label class="topic-search-label" for="topic-search">Поиск темы</label>
+  <input id="topic-search" type="search" placeholder="Например, Фибоначчи" aria-controls="reader-topics" autocomplete="off">
+  <p id="topic-search-status" class="sr-only" role="status"></p>
+  <nav id="reader-topics" aria-label="Программа курса">
     {{ toctree(maxdepth=1, collapse=false, includehidden=false) }}
   </nav>
 </details>

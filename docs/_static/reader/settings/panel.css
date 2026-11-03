@@ -1,0 +1,210 @@
+#settings-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 24rem;
+  padding: 1rem;
+  z-index: 40;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  color: var(--ink);
+  border-left: 1px solid var(--border);
+}
+#settings-panel[hidden] {
+  display: none;
+}
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.settings-header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.settings-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.settings-tabs button {
+  font: 0.8rem var(--font-prose);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.45rem;
+  background: var(--surface);
+}
+.settings-tabs button[aria-current="page"] {
+  color: var(--ink);
+  background: var(--wash);
+  box-shadow: inset 0 -2px var(--focus);
+}
+#settings-form {
+  display: grid;
+  gap: 0.9rem;
+}
+#settings-body h3 {
+  font-size: 1rem;
+}
+#settings-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+}
+#settings-form .setting-check {
+  display: flex;
+  align-items: center;
+}
+#settings-form :is(select, input[type="search"], textarea) {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  color: var(--ink);
+  background: var(--surface-muted);
+  padding: 0.5rem;
+  font: inherit;
+}
+#settings-form input[type="range"] {
+  width: 100%;
+  accent-color: var(--focus);
+}
+#settings-form output {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.settings-hint,
+.settings-preview > p,
+.settings-footer p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0.2rem 0;
+}
+.settings-preview {
+  margin-top: 1.2rem;
+}
+.settings-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.settings-footer p {
+  width: 100%;
+}
+.theme-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+.theme-card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--page);
+  color: var(--ink);
+}
+.theme-card button {
+  color: inherit;
+  background: transparent;
+}
+.theme-card [data-theme-choice] {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.7rem 0.6rem;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+  text-align: left;
+}
+.theme-card [aria-pressed="true"][data-theme-choice] {
+  border-color: var(--focus);
+}
+.theme-card strong {
+  font: 600 0.8rem var(--font-prose);
+}
+.theme-card small {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+.theme-swatch {
+  display: block;
+  font: 0.7rem var(--editor-font, monospace);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.theme-swatch span {
+  color: var(--syntax-keyword);
+}
+.theme-favorite {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  border: 0;
+  padding: 0.35rem;
+  font-size: 1rem;
+}
+.theme-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+#vscode-report {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+#vscode-report ul {
+  padding-left: 1rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+#vscode-text {
+  font: 0.8rem/1.6 monospace;
+  resize: vertical;
+}
+@media (min-width: 960px) {
+  body.settings-open {
+    padding-right: 24rem;
+  }
+  body.settings-open .page-outline {
+    display: none;
+  }
+  body.settings-open .documentation-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 959px) {
+  body.settings-open {
+    overflow: hidden;
+  }
+  #settings-panel {
+    width: 100%;
+    border: 0;
+  }
+}
+@media (max-width: 600px) {
+  .topbar .course-label {
+    display: none;
+  }
+  .topbar {
+    gap: 0.5rem;
+  }
+}
+@media print {
+  #settings-panel,
+  #settings-toggle {
+    display: none;
+  }
+  body.settings-open {
+    padding: 0;
+  }
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "id": "jetbrains_mono",
+    "name": "JetBrains Mono",
+    "family": "Course JetBrains Mono",
+    "aliases": [
+      "JetBrains Mono"
+    ],
+    "faces": [
+      {
+        "file": "jetbrains_mono/JetBrainsMono-Italic[wght].woff2",
+        "style": "italic",
+        "weights": "100 800",
+        "bytes": 76688,
+        "russian": true,
+        "sha256": "7f4ffd38ac58d4cd113aa36526420aa235e1b60d0e450706c5850fe3cfb9e9eb"
+      },
+      {
+        "file": "jetbrains_mono/JetBrainsMono[wght].woff2",
+        "style": "normal",
+        "weights": "100 800",
+        "bytes": 71536,
+        "russian": true,
+        "sha256": "618f2da9ce93bbc34b0c4e846f2798e93cc4c51ffde9ce9e99aa176cffac762c"
+      }
+    ]
+  },
+  {
+    "id": "fira_code",
+    "name": "Fira Code",
+    "family": "Course Fira Code",
+    "aliases": [
+      "Fira Code"
+    ],
+    "faces": [
+      {
+        "file": "fira_code/FiraCode[wght].woff2",
+        "style": "normal",
+        "weights": "300 700",
+        "bytes": 106164,
+        "russian": true,
+        "sha256": "58e9eda60d500fa62f372181ff5cc56cc5e38551ca77eaf6cfcd6f833cb6ca8b"
+      }
+    ]
+  },
+  {
+    "id": "source_code_pro",
+    "name": "Source Code Pro",
+    "family": "Course Source Code Pro",
+    "aliases": [
+      "Source Code Pro"
+    ],
+    "faces": [
+      {
+        "file": "source_code_pro/SourceCodeVF-Upright.ttf.woff2",
+        "style": "normal",
+        "weights": "200 900",
+        "bytes": 89808,
+        "russian": true,
+        "sha256": "4b3d5f4e21b1a0984e16358027465e6e15fe14a59e6ca92f1e12db6ad7e3f807"
+      }
+    ]
+  },
+  {
+    "id": "ibm_plex_mono",
+    "name": "IBM Plex Mono",
+    "family": "Course IBM Plex Mono",
+    "aliases": [
+      "IBM Plex Mono"
+    ],
+    "faces": [
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-Bold.woff2",
+        "style": "normal",
+        "weights": "700",
+        "bytes": 40352,
+        "russian": true,
+        "sha256": "cffb2b9af904e139ce0f60c7db234877c98a8f18df96987c277bb1d9dcd4b626"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-BoldItalic.woff2",
+        "style": "italic",
+        "weights": "700",
+        "bytes": 44196,
+        "russian": true,
+        "sha256": "fbabee4c18e7e3d2954e11fe67a0e77bf7c2a1464ee42681a8c7aacc5e8d1854"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-Italic.woff2",
+        "style": "italic",
+        "weights": "400",
+        "bytes": 43572,
+        "russian": true,
+        "sha256": "d373680118bfe6968333725e5f16818fa732ed7c6ca7a393b4ae5d6153663905"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-Light.woff2",
+        "style": "normal",
+        "weights": "300",
+        "bytes": 39372,
+        "russian": true,
+        "sha256": "d1b0482275791f124842d98f11c32d90b651907d34ae5f479016e80d33a5f93b"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-LightItalic.woff2",
+        "style": "italic",
+        "weights": "300",
+        "bytes": 43840,
+        "russian": true,
+        "sha256": "e8b9e45e40991a879761a50219a438f44b3920024155c0bc9650c0a50770c98f"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-Medium.woff2",
+        "style": "normal",
+        "weights": "500",
+        "bytes": 40136,
+        "russian": true,
+        "sha256": "7141109c1eec5351cd0ae40afe51ac06078484667814713c2b6887e72593e79a"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-MediumItalic.woff2",
+        "style": "italic",
+        "weights": "500",
+        "bytes": 44836,
+        "russian": true,
+        "sha256": "a6fc8c6bcc52f40e24b71655a56fd62034a1769e1de7467cb0cdade17da56aff"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-Regular.woff2",
+        "style": "normal",
+        "weights": "400",
+        "bytes": 39116,
+        "russian": true,
+        "sha256": "7e45e0c759de10567b68d00d9d6fb443983ddd94128fab2676f33fabe54ffbb9"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-SemiBold.woff2",
+        "style": "normal",
+        "weights": "600",
+        "bytes": 41064,
+        "russian": true,
+        "sha256": "6494a0f26cc16566d301fe3756e4ece2366a966cbb6c23129fc125bc12c845fe"
+      },
+      {
+        "file": "ibm_plex_mono/IBMPlexMono-SemiBoldItalic.woff2",
+        "style": "italic",
+        "weights": "600",
+        "bytes": 45476,
+        "russian": true,
+        "sha256": "479967442dd4061760aeaf08ee3c8aa6f15d81b0f74786b0f5118c3c311b7ed3"
+      }
+    ]
+  },
+  {
+    "id": "roboto_mono",
+    "name": "Roboto Mono",
+    "family": "Course Roboto Mono",
+    "aliases": [
+      "Roboto Mono"
+    ],
+    "faces": [
+      {
+        "file": "roboto_mono/RobotoMono-Italic[wght].woff2",
+        "style": "italic",
+        "weights": "100 700",
+        "bytes": 113532,
+        "russian": true,
+        "sha256": "e5839a38df5fe473190085a64e379ca1541c16426b7b92403208b07bc525a82b"
+      },
+      {
+        "file": "roboto_mono/RobotoMono[wght].woff2",
+        "style": "normal",
+        "weights": "100 700",
+        "bytes": 105284,
+        "russian": true,
+        "sha256": "2e47f7caa07916ba1cb6c0336718e4b2da2f8ddce1c6673e11b8b9c9e8eb21e2"
+      }
+    ]
+  },
+  {
+    "id": "ubuntu_sans_mono",
+    "name": "Ubuntu Sans Mono",
+    "family": "Course Ubuntu Sans Mono",
+    "aliases": [
+      "Ubuntu Sans Mono"
+    ],
+    "faces": [
+      {
+        "file": "ubuntu_sans_mono/UbuntuSansMono-Italic[wght].woff2",
+        "style": "italic",
+        "weights": "400 700",
+        "bytes": 84832,
+        "russian": true,
+        "sha256": "599eb3a44774f1beb84ecf21ffa4951e946544dfec3f92a62bd61d22319def22"
+      },
+      {
+        "file": "ubuntu_sans_mono/UbuntuSansMono[wght].woff2",
+        "style": "normal",
+        "weights": "400 700",
+        "bytes": 78788,
+        "russian": true,
+        "sha256": "e43cc6b38c5fbb32a18e942094129c0049f4903ba10e4f55ada7bc1e16223ad0"
+      }
+    ]
+  },
+  {
+    "id": "geist_mono",
+    "name": "Geist Mono",
+    "family": "Course Geist Mono",
+    "aliases": [
+      "Geist Mono"
+    ],
+    "faces": [
+      {
+        "file": "geist_mono/GeistMono-Italic[wght].woff2",
+        "style": "italic",
+        "weights": "100 900",
+        "bytes": 78748,
+        "russian": true,
+        "sha256": "dc4b954a2fc124f37b7174969432c9eca398b5a261ebc07a02051aaf1c699585"
+      },
+      {
+        "file": "geist_mono/GeistMono[wght].woff2",
+        "style": "normal",
+        "weights": "100 900",
+        "bytes": 71056,
+        "russian": true,
+        "sha256": "74494ca56386fa5f5a763278ea40fab07cf9fc86f3a75d57bd813db4970d6968"
+      }
+    ]
+  },
+  {
+    "id": "cascadia_code",
+    "name": "Cascadia Code",
+    "family": "Course Cascadia Code",
+    "aliases": [
+      "Cascadia Code",
+      "CascadiaCode",
+      "Cascadia Code PL"
+    ],
+    "faces": [
+      {
+        "file": "cascadia_code/CascadiaCode-Italic[wght].woff2",
+        "style": "italic",
+        "weights": "200 700",
+        "bytes": 159704,
+        "russian": true,
+        "sha256": "323a6100089ee13eb54c76722de25fa6d7854273366000ad05b17c039e8239ec"
+      },
+      {
+        "file": "cascadia_code/CascadiaCode[wght].woff2",
+        "style": "normal",
+        "weights": "200 700",
+        "bytes": 218392,
+        "russian": true,
+        "sha256": "f9797f7072ff6bff78a5756f2c18c39caba0a894431139928f4f3a672d02e63a"
+      }
+    ]
+  },
+  {
+    "id": "meslo_nerd",
+    "name": "Meslo Nerd Font",
+    "family": "Course Meslo Nerd Font",
+    "aliases": [
+      "Meslo Nerd Font",
+      "MesloLGM Nerd Font Mono",
+      "MesloLGM NF",
+      "MesloLGS NF",
+      "MesloLGS Nerd Font",
+      "Meslo Nerd Font Mono",
+      "MesloLGS Nerd Font Mono",
+      "MesloLGS NF Mono",
+      "MesloLGM NF Mono"
+    ],
+    "faces": [
+      {
+        "file": "meslo_nerd/MesloLGMNerdFontMono-Bold.woff2",
+        "style": "normal",
+        "weights": "700",
+        "bytes": 1301580,
+        "russian": true,
+        "sha256": "dfcc5e54a0c0b38ec164a131d2fbdd7218580498024e309daf2808d9cc26f193"
+      },
+      {
+        "file": "meslo_nerd/MesloLGMNerdFontMono-BoldItalic.woff2",
+        "style": "italic",
+        "weights": "700",
+        "bytes": 1276756,
+        "russian": true,
+        "sha256": "b77cd5929639c7ba361bbd00fb1db1103c2fee455061a2b269e19a1ca064bd02"
+      },
+      {
+        "file": "meslo_nerd/MesloLGMNerdFontMono-Italic.woff2",
+        "style": "italic",
+        "weights": "400",
+        "bytes": 1272116,
+        "russian": true,
+        "sha256": "299092dd6e6a309311eda86af92206a079c7170f5cbb0d9ba5e03266041964dd"
+      },
+      {
+        "file": "meslo_nerd/MesloLGMNerdFontMono-Regular.woff2",
+        "style": "normal",
+        "weights": "400",
+        "bytes": 1294884,
+        "russian": true,
+        "sha256": "4b4347eec061f034872633affa152d87579f75d2eff6404d3e3959a05faa6e35"
+      }
+    ]
+  }
+]
