@@ -1,0 +1,107 @@
+{
+  "release": "631cfbafb0f84f15e33959b977e671697ca7ac70",
+  "requests": [
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/index.html",
+      "status": 200,
+      "bytes": 34415,
+      "sha256": "df1028349b05c38079b78cb68aff3e78f8e3d60f8d9979daeb9c7e33a2bb2447"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/curriculum.html",
+      "status": 200,
+      "bytes": 22213,
+      "sha256": "193e4ee5c92dd36af07b85af3c7326d454e7e9feeb74f140af428c36cfa7882b"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/algorithms/fibonacci.html?view=code",
+      "status": 200,
+      "bytes": 44666,
+      "sha256": "0db9cee5bb439f4724b81a0b07f2edc624a6f89470a2933e34c6ee440b2125de"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/algorithms/binary-search.html?view=code",
+      "status": 200,
+      "bytes": 89776,
+      "sha256": "5282c8839ee80d7c48af0a94706f7d8a560fcf16f14ad42923425fe0d21024b6"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/data-structures/extrema.html?view=code",
+      "status": 200,
+      "bytes": 97307,
+      "sha256": "57c96b29c9801e42a96c90081db6814c566eb40d6a5411ce84d69d3b086bbb6f"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/implementations.html",
+      "status": 200,
+      "bytes": 64428,
+      "sha256": "28b7808101c9ae2b17ddd8eb13506b557d56dc59725e290117f15f08a31d19eb"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_downloads/16c7851ec2126ac9172edd27f2c97baf/minimum.py",
+      "status": 200,
+      "bytes": 1423,
+      "sha256": "2396a7aee57db9dfbb80d55aae327eb35fb5c6fdb9423f6f1987578f75561c2a"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/start.js",
+      "status": 200,
+      "bytes": 479,
+      "sha256": "7f651331fb05dd2dba5c056e09294942908f64f19c059ee33dd6ebdd3fdf9624"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/main.js",
+      "status": 200,
+      "bytes": 3888,
+      "sha256": "44606a5da7533434ceabd3480609344fcefaf12d2178ce833d92d456805374d5"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/settings/panel.js",
+      "status": 200,
+      "bytes": 16219,
+      "sha256": "16da3013e5a38ae793216bcbe268bea67d58e6501a7ae16ffb9353a4837c59fc"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/code_viewer/model.js",
+      "status": 200,
+      "bytes": 1531,
+      "sha256": "b40c6e674dd9a9943679fbc4569a8b830f802118cb801fc9fe7b5bf55852a5fb"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/view.css",
+      "status": 200,
+      "bytes": 5111,
+      "sha256": "41c8db0c7cbb013ab37ed8b2d70148e3864e7190430d2068371f52bade867811"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/settings/panel.css",
+      "status": 200,
+      "bytes": 3905,
+      "sha256": "70fa2728b74b74db9ff80a0f3b515faa7cc018717d71f11b0b2989ba2be58275"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/themes/catalog.json",
+      "status": 200,
+      "bytes": 3220,
+      "sha256": "5212e5dbd36a73bc57ea52aa6755162c946e9959cea15528f352e2db3f329ffa"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/reader/themes/palettes.css",
+      "status": 200,
+      "bytes": 171672,
+      "sha256": "9659ca2558c2bc59ec4a9fd3b4067a3b1107ed9ad806da7c2404efc001df9d96"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/fonts/catalog.json",
+      "status": 200,
+      "bytes": 8733,
+      "sha256": "b2ca168974306ba266b04e26db8d76cccb47e456ff3b74d9dfcc7023c6d50f35"
+    },
+    {
+      "url": "https://dmitriiskniazev.github.io/algorithms-and-data-structures/_static/fonts/jetbrains_mono/JetBrainsMono-Italic%5Bwght%5D.woff2",
+      "status": 200,
+      "bytes": 76688,
+      "sha256": "7f4ffd38ac58d4cd113aa36526420aa235e1b60d0e450706c5850fe3cfb9e9eb"
+    }
+  ]
+}
