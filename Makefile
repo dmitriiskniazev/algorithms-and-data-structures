@@ -19,7 +19,7 @@ setup-python:
 test: test-python
 
 test-python:
-	@if test -d tests && rg --files tests -g 'test_*.py' | rg -q .; then uv run --locked python -m pytest; else printf '%s\n' 'No Python tests yet.'; fi
+	@if test -d tests && test -n "$$(find tests -type f -name 'test_*.py' -print -quit)"; then uv run --locked python -m pytest; else printf '%s\n' 'No Python tests yet.'; fi
 
 docs:
 	uv run --locked --group docs sphinx-build -W --keep-going -b html docs docs/_build/html
